@@ -1,0 +1,19 @@
+# Notes regarding CAI-303 log rotation script
+
+# To check the creation time
+(Get-ChildItem logs.txt).CreationTime
+
+# To modify the creation time into 1 week from now
+(Get-ChildItem logs.txt).CreationTime = '12/06/2020 12:42AM'
+
+# To modify the creation time into 1 year from now
+(Get-ChildItem logs.zip).CreationTime = '08/01/2019 12:42AM'
+
+# Get Month number
+(Get-Item C:\Users\rcanare\Desktop\test-logs-directory).CreationTime.month
+
+# For deletion 
+# Remove-Item -Force
+
+# For compressing 
+# compress-archive -Path $location\$files -destinationpath '.\logs.zip' -compressionlevel optimal
